@@ -30,6 +30,13 @@
             </ul>
             <!-- End Nav-->
 
+            <!--Buy-->
+             <div class="buy-btn">
+                <button class="buy-tiktok js-buy">
+                    Login <i class="ti-user"></i>
+                </button>
+             </div>
+
             <!--Begin Search-->
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
@@ -174,28 +181,44 @@ Hãy để The Dev House cùng bạn xây dựng những giá trị số bền v
 
         <div id="footer">
 
+            <!--Modal-->
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+                <div class="modal-close js-modal-close">
+                    <i class="ti-close"></i>
+                </div>
+
+                <header class="modal-header">
+                    <i class="ti-bag"></i>
+                    LOGIN
+                </header>
+
+                <div class="modal-body">
+                    <label for="name" class="modal-label">
+                        <i class="ti-user"></i>
+                        User
+                    </label>
+                    <input id="name" type="text" class="modal-input" placeholder="Enter your username or email...">
+
+                    <label for="mail" class="modal-label">
+                        <i class="ti-lock"></i>
+                        Password
+                    </label>
+                    <input id="mail" type="text" class="modal-input" placeholder="Enter your password...">
+
+                    <button id="buy-tickets">
+                        Sign In<i class="ti-share"></i>
+                    </button>
+                </div>
+
+                <footer class="modal-footer">
+                    <p class="modal-help">
+                        Need <a href="">help?</a>
+                    </p>
+                </footer>
+            </div>
         </div>
-    </div>
 </body>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-  const items = document.querySelectorAll('.member-item');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // Chỉ kích hoạt 1 lần
-      }
-    });
-  }, {
-    threshold: 0.1 
-  });
-
-  items.forEach(item => {
-    observer.observe(item);
-  });
-});
-
-</script>
+<script src="/js/main.js"></script>
 </html>
