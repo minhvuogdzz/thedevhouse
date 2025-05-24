@@ -42,7 +42,7 @@ html {
     left: 0;
     height: 46px;
     line-height: 46px;
-    padding: 3px 3px 5px 3px;
+    padding: 3px 5px 5px 5px;
 }
 #header .logo:hover {
     background-color: #d71414;
@@ -56,7 +56,7 @@ html {
 
 .Tnav {
     position: absolute;
-    left: 5%;
+    left: 4%;
 }
 
 #nav {
