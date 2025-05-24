@@ -36,6 +36,29 @@ html {
     
 }
 
+#header .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 46px;
+    line-height: 46px;
+    padding: 3px 3px 5px 3px;
+}
+#header .logo:hover {
+    background-color: #d71414;
+    cursor: pointer;
+}
+
+#header .logo img {
+    height: 46px;
+    width: 46px;
+}
+
+.Tnav {
+    position: absolute;
+    left: 5%;
+}
+
 #nav {
     display: inline-block;
 }
