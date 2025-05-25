@@ -23,6 +23,29 @@ const buyBtns = document.querySelectorAll('.js-buy');
         event.stopPropagation();
     });
 
+
+//Show and hide admin
+   const adminBtn = document.querySelector('.admin-js')
+   const adminModal = document.querySelector('.js-info-admin');
+   const adminClose = document.querySelector('.js-admin-close');
+   const adminContainer = document.querySelector('.js-admin-container');
+
+   function showAdmin() {
+        adminModal.classList.add('open');
+   }   
+
+    function hideAdmin() {
+        adminModal.classList.remove('open');
+    }
+
+   adminBtn.addEventListener('click', showAdmin);
+   adminClose.addEventListener('click', hideAdmin);
+   adminModal.addEventListener('click', hideAdmin);
+   // Ngăn chặn sự kiện click lan truyền từ adminContainer
+   adminContainer.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+
     //Show slide
 document.addEventListener("DOMContentLoaded", function () {
     const items = document.querySelectorAll('.member-item');

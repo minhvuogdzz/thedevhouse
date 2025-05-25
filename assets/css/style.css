@@ -21,6 +21,49 @@ html {
 4. Kieu dang( font, tron, vuong,...)
  */
 
+ /* common */
+
+ /* .clear {
+    clear: both;
+ } */
+
+ .row {
+    margin-left: -8px;
+    margin-right: -8px;
+ }
+
+ .row:after {
+    content: '';
+    display: block;
+    clear: both;
+ }
+
+ .col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+ }
+
+ .col-2 {
+    width: 50%;
+ }
+
+ .col-full {
+    width: 100%;
+ }
+
+
+.col-3 {
+    position: relative;
+    width: 30.88%;
+    height: 400px;
+    margin: 10px 10px;
+    padding: 10px;
+    background-color: #797979;
+    transition: none;
+    align-items: center;
+}
+
 #main{
 
 }
@@ -419,12 +462,6 @@ html {
 
 
 .project-list{
-    height: auto;
-    /* padding: 64px 0; */
-    margin-left: auto;
-    margin-right: auto;
-    /* margin: 32 -8px 0; */
-    align-items: center;
     overflow: hidden;
 }
 
@@ -437,18 +474,17 @@ html {
     }
 }   
 
-.project-item{
+/* .project-item{
     position: relative;
-    float: left;
     width: 30%;
     height: 400px;
     margin: 10px 10px;
     background-color: #797979;
     transition: none;
     align-items: center;
-}
+} */
 
-.project-item:hover {
+.col-3:hover {
     animation: scale 0.5s forwards;
     cursor: pointer;
 }
@@ -608,7 +644,7 @@ label.modal-label {
     color:#00aeff;
 }
 
-#content .contact-section {
+#content .feedback-section {
     position: relative;
     margin-top: 20px;
     background: linear-gradient(45deg, rgb(30, 8, 86), rgb(52, 156, 170));  
@@ -617,69 +653,56 @@ label.modal-label {
     padding: 20px;
 }
 
-.contact-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* contact form */
 .contact {
-    /* position: absolute; */
-    width: 55%;
-    margin: 0 10px 20px 10px;
-    padding: 0 10px 20px 10px;
-    bottom: 20px;
-
-}
-
-.contact label{
-    display: block;
-    padding: 10px 0;
-    margin: 0 10px 0 10px;
-    width: 100%;
-}
-
-.contact input {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    margin: 0 10px 20px 10px;
-    background: none;
-    color: #fff;
-}
-
-#mess-id {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    margin: 0 10px 20px 10px;
-    background: none;
-    color: #fff;
-}
-
-.contact button {
     position: relative;
+    overflow: hidden;
     width: 100%;
-    padding: 10px;
-    border: 2px solid #ccccccd0;
-    border-radius: 10px;
-    margin: 10px 10px 20px 10px;
-    background: linear-gradient(45deg, rgb(22, 10, 59), rgb(79, 137, 145));
-    color: #fff;
-    text-transform: uppercase;
 }
 
-.contact button:hover {
-    opacity: 0.8;
+.contact-content {
+    margin-top: 18px;
+}
+
+.contact-info {
+    font-size: 14px;
+    line-height: 1.8;
+    /* left: 3px;
+     */
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+.form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+}
+
+.form-submit-btn {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 1px;
+    float: right;
     cursor: pointer;
 }
 
-i.ti-comment-alt {
-    margin-right: 5px;
-    /* line-height: 15px; */
+.form-submit-btn:hover {
+    background-color: #d71414;
 }
+
 
 #footer {
     position:relative ;
@@ -735,29 +758,139 @@ i.ti-comment-alt {
     color: #0c5075;
 }
 
-#footer .footer-info {
-    position: absolute;
-    left: 2%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#footer .footer-info p {
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #c5c5c5;
-    padding: 10px;
-}
-
 #footer .footer-text {
     position: absolute;
     font-size: 14px;
     text-align: center;
-    bottom: 10px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     color: #6b6b6b;
+    display: inline-block;
 }
+
+#footer .footer-text p {
+    display: inline;
+}
+
+p.admin-js {
+  display: inline;
+  font-weight: bold;
+  color: #999999;
+}
+
+p.admin-js:hover {
+  cursor: pointer;
+  color: #00aeff;
+}
+
+.info-admin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    display: none;
+    justify-content: center;
+}
+
+.info-admin.open {
+    display: flex;
+}
+
+.header-admin {
+    position: relative;
+    /* background-color: #777777; */
+    background: linear-gradient(45deg, rgb(30, 8, 86), rgb(52, 156, 170));
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+}
+.header-admin i.ti-id-badge {
+    margin-right: 14px;
+}
+
+.admin-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    color: #fff;
+}
+
+.admin-close:hover {
+    background-color: #777777ac;
+    color: #fff;
+    cursor: pointer;
+}
+
+@keyframes adminFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(140px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admin-container {
+    position: relative;
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    max-width: calc(100% - 20px);
+    animation: adminFadeIn 0.5s ease forwards;
+}
+
+.content-admin {
+    position: relative;
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    max-width: 100%;
+    padding: 16px;
+}
+
+.image-admin {
+    position: relative;
+    width: 250px;
+    height: 369px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; /* Ẩn phần ảnh tràn ra ngoài */
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.image-admin img {
+    max-width: 100%;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    display: block;
+    overflow: hidden;
+}
+
+.follow {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    margin: 0px 0 15px 0;
+    font-size: 14px;
+    left: 20px;  
+}
+
+
+
+
+
 
 
