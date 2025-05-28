@@ -535,6 +535,11 @@ html {
     border-radius: 10px;
 }
 
+.project-click:hover {
+    background-color: #d71414;
+    color: #000000;
+}
+
 .modal {
     position: fixed;
     top: 0;
