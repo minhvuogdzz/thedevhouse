@@ -39,6 +39,7 @@ html {
  }
 
  .col {
+    position: relative;
     float: left;
     padding-left: 8px;
     padding-right: 8px;
@@ -56,12 +57,13 @@ html {
 .col-3 {
     position: relative;
     width: 30.88%;
-    height: 400px;
-    margin: 10px 10px;
-    padding: 10px;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: #797979;
-    transition: none;
-    align-items: center;
+    height: 400px;
+    box-sizing: border-box;
+    float: left;
 }
 
 #main{
@@ -489,12 +491,30 @@ html {
     cursor: pointer;
 }
 
-.project-img{
+/* .project-img{
+    
+} */
+
+.pj-img {
     position: absolute;
-    top: 10px;
+    max-width: 100%;
+    /* overflow: hidden;  */
+    /* top: 10px;
     left: 10px;
+    right: 10px; */
+    top: 10px;
     right: 10px;
-    width: 90%;
+    left: 10px;
+    margin-bottom: 10px;
+}
+
+.pj-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    display: block;
+    border-radius: 8px;
+    transition: opacity 0.3s ease; /* Thêm hiệu ứng chuyển đổi mượt mà */
 }
 
 .project-img:hover {
@@ -504,7 +524,7 @@ html {
 
 .project-heading{
     position: absolute;
-    top: 240px;
+    top: 250px;
     bottom: 10px;
     left: 10px;
     color: #ffffff;
