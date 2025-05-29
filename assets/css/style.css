@@ -47,10 +47,20 @@ html {
 
  .col-2 {
     width: 50%;
+    position: relative;
  }
 
  .col-full {
     width: 100%;
+ }
+
+ .size {
+    position: relative;
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    height: 471px;
+    /* line-height: 1.2; */
  }
 
 
@@ -906,11 +916,10 @@ p.admin-js:hover {
 
 .follow {
     position: absolute;
-    bottom: 0;
+    bottom: 15px;
     left: 15px;
     margin: 0px 0 15px 0;
     font-size: 14px;
-    left: 20px;  
 }
 
 
